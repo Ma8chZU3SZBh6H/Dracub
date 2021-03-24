@@ -32,9 +32,9 @@ This is an attempt at making a usable and minimal REST api based server with exp
 ```
 
 ## Commands
-- npm start # Starts index.js with node
-- npm run dev # Starts index.js with nodemon
-- npm run make:app example # Creates a new app in your apps folder
+- `npm start` # Starts index.js with node
+- `npm run dev` # Starts index.js with nodemon
+- `npm run make:app example` # Creates a new app in your apps folder
 
 ## Example ENV file setup
 _.env files must be created in the same folder as index.js_
