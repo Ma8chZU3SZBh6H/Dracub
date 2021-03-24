@@ -1,0 +1,6 @@
+[ENV_NAME]_NAME=[APP_NAME]
+[ENV_NAME]_PORT=80
+[ENV_NAME]_URL=http://localhost:3000
+[ENV_NAME]_COOKIE_NAME=TOKEN
+[ENV_NAME]_DB_URL=mongodb://localhost/test
+[ENV_NAME]_JWT_TOKEN_SECRET=secret
