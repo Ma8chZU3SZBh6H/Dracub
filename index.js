@@ -1,23 +1,12 @@
 import bouncy from 'bouncy';
-import AuthApp from './src/apps/AuthApp/App.js';
-import UgaApp from './src/apps/UgaApp/App.js';
+import AppsLoader from './src/vendor/loaders/AppsLoader.js';
 
-AuthApp.start();
-UgaApp.start();
+const appsLoader = new AppsLoader();
+let bouncer;
 
-const bouncer = bouncy((req, res, bounce) => {
-    switch (req.headers.host) {
-        case 'localhost':
-        case 'example.com':
-            bounce(1001);
-            break;
-        case 'login.example.com':
-            bounce(1000);
-            break;
-        default:
-            res.statusCode = 404;
-            res.end(false);
-            break;
-    }
-});
-bouncer.listen(80);
+(async () => {
+    await appsLoader.load();
+    appsLoader.start();
+    bouncer = bouncy((req, res, bounce) => appsLoader.bounce(req, res, bounce, appsLoader.apps));
+    bouncer.listen(80);
+})();

@@ -1,0 +1,4 @@
+[ENV_NAME]_NAME=[APP_NAME]
+[ENV_NAME]_PORT=1000
+[ENV_NAME]_URL=http://localhost:3000
+[ENV_NAME]_DB_URL=mongodb://localhost/test

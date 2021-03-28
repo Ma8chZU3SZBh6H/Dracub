@@ -8,6 +8,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "minecraft-server-util": "^3.4.4",
     "mongoose": "^5.12.1",
     "mongoose-unique-validator": "^2.0.3",
     "node-input-validator": "^4.4.0",
@@ -16,6 +17,10 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "make:app": "node ./src/utils/makeApp.js"
+    "make:app": "node ./src/vendor/utils/makeApp.js",
+    "make:router": "node ./src/vendor/utils/makeRouter.js router_one",
+    "make:controller": "node ./src/vendor/utils/makeController.js controller_one",
+    "make:model": "node ./src/vendor/utils/makeModel.js model_one",
+    "make:middleware": "node ./src/vendor/utils/makeMiddleware.js middleware_one"
   }
 }
