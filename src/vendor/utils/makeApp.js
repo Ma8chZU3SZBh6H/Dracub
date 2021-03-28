@@ -39,6 +39,9 @@ if (name && templateName) {
     const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
     const nameFullyCapitalized = name.toUpperCase() + "_APP";
     const output = path.join(path.resolve('./'), `/src/apps/`);
+    if (!fs.existsSync(output)) {
+        fs.mkdirSync(output);
+    }
     if (!fs.existsSync(path.join(output, `${nameCapitalized}App`))) {
 
         const app = new Maker(output, templateName, {
